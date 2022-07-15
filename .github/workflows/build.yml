@@ -17,6 +17,12 @@ jobs:
         name: avalonia
         path: |
           src\RoslynPad.Avalonia\bin\Release\net6.0
+    - name: Upload files
+      uses: actions/upload-artifact@v2
+      with:
+        name: wpf
+        path: |
+          src\RoslynPad\bin\Release\net6.0-windows
     - uses: actions/upload-artifact@v2
       if: always()
       with:
